@@ -5,6 +5,9 @@
     "workspaceFolder": "/workspace",
     "remoteUser": "vscode",
     "containerUser": "vscode",
+    "containerEnv": {
+        "TZ": "Asia/Singapore"
+    },
     "customizations": {
         "vscode": {
             "extensions": [

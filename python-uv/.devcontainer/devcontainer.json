@@ -5,6 +5,9 @@
     "workspaceFolder": "/workspace",
     "remoteUser": "vscode",
     "containerUser": "vscode",
+    "containerEnv": {
+        "TZ": "Asia/Singapore"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
@@ -17,11 +20,13 @@
     },
     "features": {
         "ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
-            "plugins": "git zsh-autosuggestions zsh-syntax-highlighting"
+            "plugins": "zsh-autosuggestions zsh-syntax-highlighting",
+            "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git"
         },
         "ghcr.io/devcontainers-extra/features/uv:1": {
             "uv_version": "latest",
-            "python": "3.10"
+            "python": "3.14"
         }
-    }
+    },
+    "postCreateCommand": "uv python install"
 }
