@@ -27,10 +27,6 @@
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:1": {
-            "installZsh": true,
-            "configureZshAsDefaultShell": true
-        },
         "ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
             "plugins": "zsh-autosuggestions zsh-syntax-highlighting",
             "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git"
@@ -40,5 +36,5 @@
             "python": "3.14"
         }
     },
-    "postCreateCommand": "uv python install"
+    "postCreateCommand": "sudo apt update && sudo apt install iputils-ping -y && uv python install"
 }
