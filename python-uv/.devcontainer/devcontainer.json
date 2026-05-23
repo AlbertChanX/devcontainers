@@ -34,7 +34,8 @@
         "ghcr.io/devcontainers-extra/features/uv:1": {
             "uv_version": "latest",
             "python": "3.14"
-        }
+        },
+        "ghcr.io/devcontainers-extra/features/claude-code:2": {}
     },
     "postCreateCommand": "sudo apt update && sudo apt install iputils-ping -y && uv python install"
 }
